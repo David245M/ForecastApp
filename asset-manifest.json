@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/ForecastApp/static/css/main.c4fc3a3b.chunk.css",
-    "main.js": "/ForecastApp/static/js/main.3f178c06.chunk.js",
-    "main.js.map": "/ForecastApp/static/js/main.3f178c06.chunk.js.map",
+    "main.css": "/ForecastApp/static/css/main.c280ed93.chunk.css",
+    "main.js": "/ForecastApp/static/js/main.cc4c52d2.chunk.js",
+    "main.js.map": "/ForecastApp/static/js/main.cc4c52d2.chunk.js.map",
     "runtime-main.js": "/ForecastApp/static/js/runtime-main.3ea2a21e.js",
     "runtime-main.js.map": "/ForecastApp/static/js/runtime-main.3ea2a21e.js.map",
-    "static/js/2.e5aaea84.chunk.js": "/ForecastApp/static/js/2.e5aaea84.chunk.js",
-    "static/js/2.e5aaea84.chunk.js.map": "/ForecastApp/static/js/2.e5aaea84.chunk.js.map",
+    "static/js/2.b3b875a9.chunk.js": "/ForecastApp/static/js/2.b3b875a9.chunk.js",
+    "static/js/2.b3b875a9.chunk.js.map": "/ForecastApp/static/js/2.b3b875a9.chunk.js.map",
     "index.html": "/ForecastApp/index.html",
-    "precache-manifest.70e206b556b4811bdbbf5752cf3107e0.js": "/ForecastApp/precache-manifest.70e206b556b4811bdbbf5752cf3107e0.js",
+    "precache-manifest.ec17bfbfcf49972cc1db5389b10ea5eb.js": "/ForecastApp/precache-manifest.ec17bfbfcf49972cc1db5389b10ea5eb.js",
     "service-worker.js": "/ForecastApp/service-worker.js",
-    "static/css/main.c4fc3a3b.chunk.css.map": "/ForecastApp/static/css/main.c4fc3a3b.chunk.css.map",
-    "static/js/2.e5aaea84.chunk.js.LICENSE.txt": "/ForecastApp/static/js/2.e5aaea84.chunk.js.LICENSE.txt"
+    "static/css/main.c280ed93.chunk.css.map": "/ForecastApp/static/css/main.c280ed93.chunk.css.map",
+    "static/js/2.b3b875a9.chunk.js.LICENSE.txt": "/ForecastApp/static/js/2.b3b875a9.chunk.js.LICENSE.txt",
+    "static/media/broken-clouds.svg": "/ForecastApp/static/media/broken-clouds.a2c8892a.svg",
+    "static/media/clouds.svg": "/ForecastApp/static/media/clouds.a2c8892a.svg",
+    "static/media/few-clouds-night.svg": "/ForecastApp/static/media/few-clouds-night.f1778cfc.svg",
+    "static/media/few-clouds.svg": "/ForecastApp/static/media/few-clouds.023fc0db.svg",
+    "static/media/rain.svg": "/ForecastApp/static/media/rain.87526ea7.svg",
+    "static/media/sunny.svg": "/ForecastApp/static/media/sunny.9fc79263.svg",
+    "static/media/thunderstorm.svg": "/ForecastApp/static/media/thunderstorm.3a2b0d14.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3ea2a21e.js",
-    "static/js/2.e5aaea84.chunk.js",
-    "static/css/main.c4fc3a3b.chunk.css",
-    "static/js/main.3f178c06.chunk.js"
+    "static/js/2.b3b875a9.chunk.js",
+    "static/css/main.c280ed93.chunk.css",
+    "static/js/main.cc4c52d2.chunk.js"
   ]
 }
