@@ -1,17 +1,95 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+//import Preloader from './Preloader'
+import './style.css'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+var weather, position;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const render = () => {
+    ReactDOM.render(
+        <App weather={weather} position={position} style={{opacity:0}}/>,
+        document.getElementById('root')
+    )
+}
+window.onload = loading;
+
+function loading() {
+    let div = document.createElement('div');
+    div.id = 'root'
+    div.classList.add('loading')
+    document.body.appendChild(div);
+    setPosition(navigator.geolocation).then(pos => {
+        getLocation(pos)
+            .then(po => {position = po.results[0]})
+            .then(po => {
+                setWeather(pos).then(result => {
+                    weather = result;
+                    render();
+                    div.classList.remove('loading');
+                    console.log(weather)
+                }) 
+            })
+        
+    })
+}
+
+function setWeather(pos) {
+    const ID = `ed1c9f62943c7e399b215a7abd341289`;
+    const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${pos.latitude}&lon=${pos.longitude}&exclude=&appid=${ID}&units=metric`
+    const promiceWeather = new Promise((resolved, rejected) => {
+        const require = new XMLHttpRequest();
+        require.responseType = 'json'
+        require.open('GET', URL);
+        require.onload = (err) => {
+            // eslint-disable-next-line eqeqeq
+            if (require.status == 200) {
+                
+                resolved(require.response) 
+            } else {
+                
+                rejected(require.status);
+            }
+        }
+        require.send(null)
+    })
+
+    return promiceWeather;
+}
+
+function setPosition(geo) {
+    const promicePosition = new Promise((resolved, rejected) => {
+        if(!!geo){
+            geo.getCurrentPosition(pos => {
+                resolved(pos.coords);
+            })
+        } else { 
+            rejected(Error('navigator.geolocation is not defined!!'))
+        }
+    })
+
+    return promicePosition;
+}
+
+function getLocation(pos){
+    const URL = `https://api.opencagedata.com/geocode/v1/json?q=${pos.latitude}+${pos.longitude}&key=6e14c6c9118a4f8492aec145d9c37124`
+
+    return new Promise((resolved, rejected) => {
+        const require = new XMLHttpRequest()
+        require.responseType= 'json'
+        require.open('GET', URL)
+        require.onload = (err) => {
+            // eslint-disable-next-line eqeqeq
+            if (require.status == 200) {
+                
+                resolved(require.response) 
+            } else {
+                
+                rejected(require.status);
+            }
+        }
+        require.send(null);
+    })
+}
+

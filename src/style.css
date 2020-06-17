@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(-45deg, #ffd14d, #eb7c96);
+    background: -webkit-linear-gradient(-45deg, #ffd14d, #eb7c96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    height: fit-content;
+
+}
+
+#root {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.loading {
+    opacity: 0 !important;
+}
+
+.app {
+    margin: 0 auto;
+    min-width: 300px;
+    width: 36.5vw;
+    max-width: 600px;
+    /*background: rgba(255,255,255,0.4);*/
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location, .sun {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.sun {
+    font-size: 1.2em;
+}
+
+.app > div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.icon-big {
+    height: 250px;
+    align-self: center;
+}
+
+.icon {
+    align-self: center;
+    height: 80px;
+    width: 80px;
+}
+
+h1.temperature {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    padding-bottom: 20px;
+}
+
+p.temperature {
+    font-size: 1.5rem;
+}
+
+.hours {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hour {
+    display: flex;
+    flex-direction: column;
+    background: rgba(243, 218, 148, 0.4);
+    border-radius: 5px;
+    width: 24%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 400px) {
+    .options{
+        font-size: 0.8em;
+    }
+}
+
+.hour .option{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option p, 
+.option picture {
+    width: 50%;
+}
+
+.options picture {
+    display: flex;
+    width: 20px;
+    height: 35px;
+}
+
+.option img {
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
