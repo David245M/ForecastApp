@@ -1,3 +1,7 @@
+Forecast App built with React, OpenWeather API
+
+Link: https://david245m.github.io/forecastapp
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
