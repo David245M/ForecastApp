@@ -1,0 +1,52 @@
+.hours {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hour {
+    background: rgba(243,218,148,.4);
+
+    border-radius: 5px;
+    width: 24%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.hour .icon {
+    font-size: 0.33rem;
+}
+
+.hour .temperature {
+    font-size: 1.5rem;
+}
+
+ul.optionList {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.option picture {
+    display: flex;
+    width: 20px;
+    height: 35px;
+}
+
+.option img{
+    width: 100%;
+    align-self: center;
+    place-items: center;
+}
+
+.option p {
+    width: 50%;
+}

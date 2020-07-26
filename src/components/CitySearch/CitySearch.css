@@ -1,0 +1,30 @@
+.city-search {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    background-color: rgba(243, 218, 148, 0.4);
+    color: rgba(255, 255, 255, 1);
+    font-size: 1rem;
+
+    border-radius: 15px;
+    height: 3rem;
+    padding: 10px;
+    width: 60%;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1em;
+    border: 0;
+}
+
+.city-search button {
+    width: 30%;
+}

@@ -1,0 +1,25 @@
+.findMe {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button {
+    width: 65%;
+    height: 2em;
+    border: 0;
+
+    background-color: rgba(243, 218, 148, 0.4);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.25em;
+
+    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.596);
+    transition: .333s;
+}
+
+button:active {
+    box-shadow: unset;
+}

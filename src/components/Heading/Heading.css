@@ -1,0 +1,16 @@
+.heading {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location,
+.sun {
+    display: flex;
+    flex-direction: column;
+}
+
+.location {
+    align-items: flex-end;
+}
